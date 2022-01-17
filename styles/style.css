@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+.first {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #00ffec;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #ff00f2;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #00ffec;
+    }
+}
+
+.ring:before {
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.loading1 {
+    color: gray;
+    font-size: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+}
+
+.line {
+    background: rgba(255, 255, 255, 0.1);
+    height: 2px;
+    width: 25vh;
+}
+
+.progress {
+    width: 30%;
+    height: 100%;
+    background: #00ff22;
+    box-shadow: 2px 5px 10px #00ff22;
+    animation: move 2s linear infinite;
+}
+
+.progress2 {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 2px 5px 10px #ffffff;
+    animation: goHide 2s linear infinite;
+}
+
+@keyframes goHide {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(170px);
+    }
+}
+
+.wrapper > div {
+    margin: 5vh;
+}
+
+.loading2 {
+    color: gray;
+    font-size: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+}
+
+.loading3 {
+    color: gray;
+    font-size: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.1vh;
+}
+
+a {
+    color: #363636;
+    font-size: 10px;
+    transition: color 450ms;
+}
+
+a:hover {
+    color: white;
+}
